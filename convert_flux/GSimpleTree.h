@@ -113,9 +113,9 @@ GSimpleTree::GSimpleTree(TTree *tree) : fChain(0)
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
    if (tree == 0) {
-      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/pnfs/uboone/persistent/uboonebeam/bnb_gsimple/bnb_gsimple_fluxes_02.05.2018_463/converted_beammc_0000.root");
+      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/pnfs/sbnd/persistent/users/abeever/xsec/flux/SBNDtotalFluxConfigK.root");
       if (!f || !f->IsOpen()) {
-         f = new TFile("/pnfs/uboone/persistent/uboonebeam/bnb_gsimple/bnb_gsimple_fluxes_02.05.2018_463/converted_beammc_0000.root");
+         f = new TFile("/pnfs/sbnd/persistent/users/abeever/xsec/flux/SBNDtotalFluxConfigK.root");
       }
       f->GetObject("flux",tree);
 

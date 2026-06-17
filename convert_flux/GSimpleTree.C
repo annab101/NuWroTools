@@ -4,6 +4,7 @@
 #include <TStyle.h>
 #include <TCanvas.h>
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -79,8 +80,8 @@ void GSimpleTree::Loop()
    if (fChain == 0) return;
 
 
-   TFile *outfile = new TFile("uboone_flux.root", "RECREATE", "MicroBooNE Flux");
-   TTree *outtree = new TTree("h3002", "MicroBooNE Flux");
+   TFile *outfile = new TFile("/pnfs/sbnd/persistent/users/abeever/xsec/flux/SBNDtotalFluxConfigKforNuWro.root", "RECREATE", "SBND Flux");
+   TTree *outtree = new TTree("h3002", "SBND Flux");
    Float_t Enu, nnu[3], xnu, ynu, znu, norm;
    Int_t mode;
    outtree->Branch( "Enu", &Enu, "Enu/F" );

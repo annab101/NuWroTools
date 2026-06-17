@@ -1,8 +1,8 @@
 void make_geo() {
 
   gSystem->Load("libGeom");
-  TGeoManager::Import("sbnd_v01_04_detonly.gdml");
+  TGeoManager::Import("/pnfs/sbnd/persistent/users/abeever/xsec/geo/sbnd_v02_03.gdml");
   // gGeoManager->GetTopVolume()->Draw("ogl");
-  gGeoManager->Export("SBNDGeometry.root", "SBNDGeometry");
+  gGeoManager->Export("/pnfs/sbnd/persistent/users/abeever/xsec/geo/sbnd_v02_03_NuWro.root", "SBNDGeometry");
 }
 
